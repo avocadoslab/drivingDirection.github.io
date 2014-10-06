@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Directions service</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+	  
+	  #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+	  </style>
+	  <style>
+      #directions-panel {
+        height: 100%;
+        float: right;
+        width: 390px;
+        overflow: auto;
+      }
+	  
+	  #list-panel {
+        height: 100%;
+        float: left;
+        width: 250px;
+        overflow: auto;
+		background-color: #ffffff;
+      }
+	  
+	  #list-text{	  
+	 padding-left:30px;
+	 padding-right:50px;
+	 }
+
+      #map-canvas {
+        margin-right: 400px;
+      }
+
+      #control {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+      }
+
+      @media print {
+        #map-canvas {
+          height: 500px;
+          margin: 0;
+        }
+
+        #directions-panel {
+          float: none;
+          width: auto;
+        }
+		
+		#list-panel {
+          float: none;
+          width: auto;
+        }
+      }
+    </style>
+    
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	
+	<script>
+	
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+var pos;
+
+function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+  var mapOptions = {
+    zoom:15,   
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+  var control = document.getElementById('control');
+  control.style.display = 'block';
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+  
+  // Find GeoLocation of Client
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      var infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: pos
+        //content: 'Current Location'		
+      });
+
+      map.setCenter(pos);
+    }, function() {
+      handleNoGeolocation(true);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleNoGeolocation(false);
+  }       
+  
+}
+
+function calcRoute() {
+  var start = pos;
+  var end = '7 walnut, binghamton';
+  var request = {
+      origin:start,
+      destination:end,
+      travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+
+function calcRouteNew() {
+  var selectedMode = document.getElementById('mode').value;
+  var start = pos;
+  var end = document.getElementById('end').value;
+  //var end = document.getElementById('end1').value;
+  var request = {
+      origin:start,
+      destination:end,
+	  travelMode: google.maps.TravelMode[selectedMode]	 
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+
+function handleNoGeolocation(errorFlag) {
+  if (errorFlag) {
+    var content = 'Error: The Geolocation service failed.';
+  } else {
+    var content = 'Error: Your browser doesn\'t support geolocation.';
+  }
+
+  var options = {
+    map: map,
+    position: new google.maps.LatLng(60, 105),
+    content: content
+  };
+
+  var infowindow = new google.maps.InfoWindow(options);
+  map.setCenter(options.position);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', calcRoute);
+
+  </script>		
+</head>
+
+<body>	
+
+	<div id="control">
+    <b>Choose Other</b>
+    <select id="end" onchange="calcRouteNew();">
+	  <option value="">Choose</option>
+      <option value="198 main, binghamton">Ganesh Patil</option>
+      <option value="3 main, texas">Peter Lue</option>
+      <option value="56 walnut, binghamton">Alex Povoltsky</option>
+      <option value="45 oak, binghamton">Teressa Miller</option>  
+	  <option value="21 exchange, binghamton">Madhura Bhave</option> 
+	  <option value="43 leroy, binghamton">Sanket Chindhi</option>
+    </select>
+	<b>Mode of Travel: </b>
+    <select id="mode" onchange="calcRouteNew();">
+      <option value="DRIVING">Driving</option>
+      <option value="WALKING">Walking</option>      
+    </select>
+    </div>
+	
+	<div id="list-panel">
+
+	<div id="list-text">
+	
+	<h2>Ganesh Patil</h2>
+	<h3>Software Developer</h3>
+	<p>198 Main St, apt Right</br>Binghamton, New York</p>
+	<a href="#">Get Directions</a>
+	
+	
+	<hr>
+	
+	<h2>Peter Lue</h2>
+	<h3>Electrical Engineer</h3>
+	<p>3 Main St</br>Binghamton, New York</p>
+	<a href="#">Get Directions</a>
+	
+	<hr>
+	
+	<h2>Alex Povoltsky</h2>
+	<h3>Industrial Engineer</h3>
+	<p>56 Walnut St</br>Binghamton, New York</p>
+	<a href="#">Get Directions</a>
+	
+	<hr>
+	
+	<h2>Teressa Miller</h2>
+	<h3>Electrical Engineer</h3>
+	<p>45 Oak St</br>Binghamton, New York</p>
+	<a href="#">Get Directions</a>
+	
+	<hr>
+	
+	<h2>Madhura Bhave</h2>
+	<h3>Electrical Engineer</h3>
+	<p>21 Exchange</br>Binghamton, New York</p>
+	<a href="#">Get Directions</a>
+	
+	</div>
+	
+	</div>
+	
+	<div id="directions-panel"></div>
+	
+    <div id="map-canvas"></div>
+	
+	
+	
+</body>
+
+</html>
