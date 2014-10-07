@@ -6,6 +6,7 @@
     <title>Driving Direction</title>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	<script src="js/maps.js"></script>
+	<script src="loadxmldoc.js"></script>
 	<link rel="stylesheet" href="css/style.css">	
 </head>
 
@@ -30,8 +31,15 @@
     </div>
 	
 	<div id="list-panel">
+	
+	<script>
+	xmlDoc=loadXMLDoc("xml/list.xml");
+	document.write(xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue + "<br>");
+	document.write(xmlDoc.getElementsByTagName("author")[0].childNodes[0].nodeValue + "<br>");
+	document.write(xmlDoc.getElementsByTagName("year")[0].childNodes[0].nodeValue);
+	</script>
 
-	<div id="list-text">
+	<div id="list-text">	
 	
 	<h2>Ganesh Patil</h2>
 	<h3>Software Developer</h3>
