@@ -1,0 +1,37 @@
+#header{
+	background-color:#123656;
+	color:white;
+	text-align:center;
+	padding: 5px;
+}
+
+#nav-bar-left{
+	background-color:#eeeeee;
+	height:100%;
+	width:5%;
+	float:left;
+	padding:35px;
+}
+
+#nav-bar-right{
+	background-color:#eeeeee;
+	height:100%;
+	width:5%;
+	float:right;
+	padding:35px;
+}
+
+#section{
+	width:800px;
+	float:left;
+	padding:5px;
+}
+
+
+#footer{
+	background-color:#123656;
+	color:white;
+	clear:both;
+	text-align:center;
+	padding:5px;
+}
