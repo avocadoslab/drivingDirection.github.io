@@ -1,14 +1,13 @@
-
-<project name="dTunesStore" default="compile" basedir=".">
+<project name="myComputerManual" default="compile" basedir=".">
 
   <property name="build.compiler"              value="modern"/>
   <property name="src"                  value="src"/>
   <property name="BUILD"                value="build"/>
   <property name="classes"              value="${BUILD}/classes"/>
-
+  <property name="build.sysclasspath" value="last"/>
 
   <target name="compile"
-          depends="dTunesStore"/>
+          depends="myComputerManual"/>
 
   <target name="clean">
        <delete dir="${BUILD}"/>
@@ -25,9 +24,9 @@
   <!-- * means all files in the current directory -->
   <!-- for just java files use *.java -->
 
-  <target name="dTunesStore" depends="prepare">
+  <target name="myComputerManual" depends="prepare">
     <javac srcdir="${src}"
-           includes="dTunesStore/**"
+           includes="myComputerManual/**"
            excludes="**/package.html"
            destdir="${classes}"
            classpath="${classes}"
@@ -38,25 +37,24 @@
 
  <target name="jar">
         <mkdir dir="${BUILD}/jar"/>
-        <jar destfile="${BUILD}/jar/dTunesStore.jar" basedir="${BUILD}/classes">
+        <jar destfile="${BUILD}/jar/myComputerManual.jar" basedir="${BUILD}/classes">
             <manifest>
-                <attribute name="Main-Class" value="dTunesStore.driver.Driver"/>
+                <attribute name="Main-Class" value="myComputerManual.driver.Driver"/>
             </manifest>
         </jar>
     </target>
 
 
 <target name="run" depends="jar">
-        <java jar="${BUILD}/jar/dTunesStore.jar"  fork="true">
-	  <arg value="musicFileName"/>
-          <arg value="4"/>
-	  <arg value="searchFileName"/>
-          <arg value="4"/>
-          <arg value="5"/>
-
-	 </java>
-	
+        <java jar="${BUILD}/jar/myComputerManual.jar"  fork="true">
+      <arg value="${arg0}"/>
+      </java>
     </target>
-
-
+	
+<target name="tarzip"> 
+	<delete file="./myComputerManual.tar" quiet="true" /> 
+	<delete file="./myComputerManual.tar.gz" quiet="true"/> 
+	<tar destfile="./myComputerManual.tar" basedir="." /> 
+	<gzip src="./myComputerManual.tar" destfile="./myComputerManual.tar.gz" />
+	</target>
 </project>

@@ -5,7 +5,6 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Vector;
 
-
 public class ManualPrint {
 	
 		public void printManual(HashMap<String,Integer> menuFinal){
@@ -190,40 +189,40 @@ public class ManualPrint {
 		int pageNumber = 0;
 		if(menuItems.get(0).length() != 0 && !menuItems.get(0).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("CPU\n" + menuItems.get(0), pageNumber);
+			manual.put("CPU\n" + menuItems.get(0)+"                                                         ", pageNumber);
 		}
 		if(menuItems.get(1).length() != 0 && !menuItems.get(1).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("Memory\n" +menuItems.get(1), pageNumber);
+			manual.put("\nMemory\n" +menuItems.get(1)+"                                                         ", pageNumber);
 		}
 		if(menuItems.get(2).length() != 0 && !menuItems.get(2).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("Disk\n"+menuItems.get(2), pageNumber);
+			manual.put("\nDisk\n"+menuItems.get(2)+"                                                         ", pageNumber);
 		}
 
 		if(menuItems.get(3).length() != 0 && !menuItems.get(3).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("Graphics Card\n"+menuItems.get(3), pageNumber);
+			manual.put("\nGraphics Card\n"+menuItems.get(3)+"                                                         ", pageNumber);
 		}
 		
 		if(menuItems.get(4).length() != 0 && !menuItems.get(4).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("Optical Drive\n"+menuItems.get(4), pageNumber);
+			manual.put("\nOptical Drive\n"+menuItems.get(4)+"                                                         ", pageNumber);
 		}
 		
 		if(menuItems.get(5).length() != 0 && !menuItems.get(5).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("Monitor\n"+menuItems.get(5), pageNumber);
+			manual.put("\nMonitor\n"+menuItems.get(5)+"                                                         ", pageNumber);
 		}
 		
 		if(menuItems.get(6).length() != 0 && !menuItems.get(6).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("Operating System\n"+menuItems.get(6), pageNumber);
+			manual.put("\nOperating System\n"+menuItems.get(6)+"                                                         ", pageNumber);
 		}
 		
 		if(menuItems.get(7).length() != 0 && !menuItems.get(7).equals("")){
 			pageNumber = pageNumber + 1;
-			manual.put("Support\n"+menuItems.get(7), pageNumber);
+			manual.put("\nSupport\n"+menuItems.get(7)+"                                                         ", pageNumber);
 		}
 		return manual;
 	}

@@ -78,8 +78,8 @@ public class Menu {
 						gloss.add("RAM : Random-Access Memory,  This is the memory where the software resides while it is running along with the data it is using. RAM is used by both OS and application software.\n"
 								+ "DDR3 SDRAM : Double data rate type three synchronous dynamic random-access memory\n"
 								+ "DIMM : DIMM or dual in-line memory module comprises a series of dynamic random-access memory integrated circuits.\n");
-						lof.add("Figure 3 : Memory module DDRAM\n"
-								+ "Figure 4 : A portion of a core memory\n");
+						lof.add("Figure 1 : Memory module DDRAM\n"
+								+ "Figure 2 : A portion of a core memory\n");
 						System.out.println("You have selected : 4GB DDR3 Memory");
 					}
 					else{
@@ -89,8 +89,8 @@ public class Menu {
 								+ "DDR3 SDRAM : Double data rate type three synchronous dynamic random-access memory\n"
 								+ "DIMM : DIMM or dual in-line memory module comprises a series of dynamic random-access memory integrated circuits.\n"
 								+ "Latency : SDRAM latency refers to delays in transmitting data between the CPU and SDRAM. SDRAM latency is often measured in memory bus clock cycles.\n");
-						lof.add("Figure 3 : Memory module DDRAM\n"
-								+ "Figure 4 : Memory wall\n");
+						lof.add("Figure 1 : Memory module DDRAM\n"
+								+ "Figure 2 : Memory wall\n");
 						System.out.println("You have selected : 8GB DDR3 Memory");
 					}
 				}
@@ -112,8 +112,8 @@ public class Menu {
 						gloss.add("Magnetic Heads : Disk read/write heads are the small parts of a disk drive, that move above the disk platter and transform the platter's magnetic field into electrical current\n"
 								+ "SATA : Serial ATA (SATA) is a computer bus interface that connects host bus adapters to mass storage devices such as hard disk drives and optical drives.\n"
 								+ "Flash Memory : Flash memory is an electronic non-volatile computer storage medium that can be electrically erased and reprogrammed.\n");
-						lof.add("Figure 5 : A 2.5inch SATA hard drive\n"
-								+ "Figure 6 : Overview of how an HDD functions\n");
+						lof.add("Figure 1 : A 2.5inch SATA hard drive\n"
+								+ "Figure 2 : Overview of how an HDD functions\n");
 						System.out.println("You have selected : 500GB Disk");
 					}
 					else{
@@ -123,8 +123,8 @@ public class Menu {
 								+ "SATA : Serial ATA (SATA) is a computer bus interface that connects host bus adapters to mass storage devices such as hard disk drives and optical drives.\n"
 								+ "Flash Memory : Flash memory is an electronic non-volatile computer storage medium that can be electrically erased and reprogrammed.\n"
 								+ "EPROM : An EPROM (rarely EROM), or erasable programmable read only memory, is a type of memory chip that retains its data when its power supply is switched off.\n");
-						lof.add("Figure 5 : Major components of a computer HDD\n"
-								+ "Figure 6 : Overview of how an HDD functions\n");
+						lof.add("Figure 1 : Major components of a computer HDD\n"
+								+ "Figure 2 : Overview of how an HDD functions\n");
 						System.out.println("You have selected : 1TB Disk");
 					}
 				}
@@ -147,8 +147,8 @@ public class Menu {
 						gloss.add("EGA : The Enhanced Graphics Adapter (EGA) is an IBM PC computer display standard specification which is between CGA and VGA in terms of color and space resolution\n"
 								+ "RGB : The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors.\n"
 								+ "Palette : In computer graphics, a palette is either a given, finite set of colors for the management of digital images (that is, a color palette)\n");
-						lof.add("Figure 7 : A Radeon HD 4770 card\n"
-								+ "Figure 8 : Classical desktop computer architecture\n");
+						lof.add("Figure 1 : A Radeon HD 4770 card\n"
+								+ "Figure 2 : Classical desktop computer architecture\n");
 						System.out.println("You have selected : 1GB Graphics Card");
 					}
 					else{
@@ -158,8 +158,8 @@ public class Menu {
 								+ "RGB : The RGB color model is an additive color model in which red, green, and blue light are added together in various ways to reproduce a broad array of colors.\n"
 								+ "Palette : In computer graphics, a palette is either a given, finite set of colors for the management of digital images (that is, a color palette)\n"
 								+ "MCGA : The Multi-Color Graphics Array or MCGA was a video subsystem built into the motherboard of the IBM PS/2 Model 30\n");
-						lof.add("Figure 7 : A Radeon HD 9850 card\n"
-								+ "Figure 8 : Classical desktop computer architecture\n");
+						lof.add("Figure 1 : A Radeon HD 9850 card\n"
+								+ "Figure 2 : Classical desktop computer architecture\n");
 						System.out.println("You have selected : 2GB Graphics Card");
 					}
 				}
@@ -186,8 +186,8 @@ public class Menu {
 					gloss.add("Laser : A laser is a device that emits light through a process of optical amplification based on the stimulated emission of electromagnetic radiation\n"
 							+ "Spectram : The electromagnetic spectrum is the range of all possible frequencies of electromagnetic radiation\n"
 							+ "Photodiode : A photodiode is a semiconductor device that converts light into current.\n");
-					lof.add("Figure 9 : A CD/DVD-ROM Drive\n"
-							+ "Figure 10 : An external USB SuperDrive\n");
+					lof.add("Figure 1 : A CD/DVD-ROM Drive\n"
+							+ "Figure 2 : An external USB SuperDrive\n");
 					System.out.println("You have selected : USB 2.0 Optical Dive");
 				}
 				else{
@@ -197,8 +197,8 @@ public class Menu {
 							+ "Spectram : The electromagnetic spectrum is the range of all possible frequencies of electromagnetic radiation\n"
 							+ "Photodiode : A photodiode is a semiconductor device that converts light into current.\n"
 							+ "Lens : A lens is an optical device which transmits and refracts light, converging or diverging the beam\n");
-					lof.add("Figure 9 : A CD/DVD-ROM Drive\n"
-							+ "Figure 10 : A CD-ROM Drive (without case)\n");
+					lof.add("Figure 1 : A CD/DVD-ROM Drive\n"
+							+ "Figure 2 : A CD-ROM Drive (without case)\n");
 					System.out.println("You have selected : USB 3.0 Optical Drive");
 				}
 				break;
@@ -234,8 +234,8 @@ public class Menu {
 				gloss.add("Cathode Ray Tube : The cathode ray tube or (CRT) is a vacuum tube containing one or more electron guns, and a fluorescent screen used to view images\n"
 						+ "Aspect Ratio : The aspect ratio of a geometric shape is the ratio between its sizes in different dimensions.\n"
 						+ "Monochrome : Monochrome describes paintings, drawings, design, or photographs in one color or shades of one color.\n");
-				lof.add("Figure 11 : A 32inch monitor\n"
-						+ "Figure 12 : A panel mount 32-inch");
+				lof.add("Figure 1 : A 32inch monitor\n"
+						+ "Figure 2 : A panel mount 32-inch\n");
 				System.out.println("You have selected : 32inches Monitor");
 			}
 			else{
@@ -243,8 +243,8 @@ public class Menu {
 				desc.add("Samsung C150 Series S22C150N 21.5 1080p LED-Backlit LCD Monitor");
 				gloss.add("Cathode Ray Tube : The cathode ray tube or (CRT) is a vacuum tube containing one or more electron guns, and a fluorescent screen used to view images\n"
 						 + "Monochrome : Monochrome describes paintings, drawings, design, or photographs in one color or shades of one color.\n");
-				lof.add("Figure 11 : A 54inch monitor\n"
-						+ "Figure 12 : A panel mount 54-inch");
+				lof.add("Figure 1 : A 54inch monitor\n"
+						+ "Figure 2 : A panel mount 54-inch\n");
 				System.out.println("You have selected : 54inches Monitor");
 			}
 			break;
@@ -279,8 +279,8 @@ public class Menu {
 				desc.add("Windows 7 is a personal computer operating system developed by Microsoft, a version of Windows NT.");
 				gloss.add("Time Sharing : Time-sharing is the sharing of a computing resource among many users by means of multiprogramming and multi-tasking.\n"
 						+ "Interrupts : A programmable interrupt controller (PIC) is a device that is used to combine several sources of interrupt onto one or more CPU lines\n");
-				lof.add("Figure 13 : Screenshot of Windows 7\n"
-						+ "Figure 14 : Windows 7 live thumbnails");
+				lof.add("Figure 1 : Screenshot of Windows 7\n"
+						+ "Figure 2 : Windows 7 live thumbnails\n");
 				System.out.println("You have selected : Windows 7 Operating System");
 			}
 			else{
@@ -289,8 +289,8 @@ public class Menu {
 				gloss.add("Time Sharing : Time-sharing is the sharing of a computing resource among many users by means of multiprogramming and multi-tasking.\n"
 						+ "Interrupts : A programmable interrupt controller (PIC) is a device that is used to combine several sources of interrupt onto one or more CPU lines\n"
 						+ "CP67 : CP-67 was the control program portion of CP/CMS, a virtual machine operating system developed for the IBM System/360-67 by IBM's Cambridge Scientific Center\n");
-				lof.add("Figure 13 : Screenshot of Windows 8.1\n"
-						+ "Figure 14 : Windows 8.1 live thumbnails");
+				lof.add("Figure 1 : Screenshot of Windows 8.1\n"
+						+ "Figure 2 : Windows 8.1 live thumbnails\n");
 				System.out.println("You have selected : Windows 8.1 Operating System");
 			}
 			break;
@@ -326,7 +326,7 @@ public class Menu {
 				gloss.add("Knowledge Base : A knowledge base (KB) is a technology used to store complex structured and unstructured information used by a computer system.\n"
 						+ "Proactive Support Automation : It refers to support automation solutions that minimize downtime and enable 24x7 availability.\n"
 						+ "Assisted Support Automation : It is the software that enables support personnel to remotely access their customers desktop or server for diagnostics and trouble ticket resolution\n");
-				lof.add("Figure 15 : Official partner certificate\n");
+				lof.add("Figure 1 : Official partner certificate\n");
 				System.out.println("You have selected : 1 Year support ");
 			}
 			else{
@@ -335,7 +335,7 @@ public class Menu {
 				gloss.add("Knowledge Base : A knowledge base (KB) is a technology used to store complex structured and unstructured information used by a computer system.\n"
 						+ "Proactive Support Automation : It refers to support automation solutions that minimize downtime and enable 24x7 availability.\n"
 						+ "Assisted Support Automation : It is the software that enables support personnel to remotely access their customers desktop or server for diagnostics and trouble ticket resolution\n");
-				lof.add("Figure 15 : \n");
+				lof.add("Figure 1 : Official partner certificate\n");
 				System.out.println("You have selected : 2 year support");
 			}
 			break;

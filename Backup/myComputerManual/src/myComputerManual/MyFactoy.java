@@ -1,5 +1,9 @@
 package myComputerManual;
 
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Vector;
+
 import components.Cpu;
 import components.Disk;
 import components.GraphicsCard;
@@ -8,6 +12,7 @@ import components.Monitor;
 import components.OperatingSystem;
 import components.OpticalDrive;
 import components.Support;
+
 
 public class MyFactoy {
 	
@@ -35,7 +40,7 @@ public class MyFactoy {
 	      
 	      return null;
 	   }
-	  
+	  	  	  
 	  @Override
 		public String toString() {
 			StringBuilder result = new StringBuilder();
